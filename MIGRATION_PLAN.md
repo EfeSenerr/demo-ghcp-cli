@@ -26,7 +26,7 @@ The migrated `agent_framework_agents.py` will use:
 
 ### Target Architecture
 ```
-writer (ChatAgent) → reviewer (ChatAgent) → WorkflowCompletedEvent
+writer (ChatAgent) → reviewer (ChatAgent) → WorkflowOutputEvent
 ```
 
 ## Migration Checklist
