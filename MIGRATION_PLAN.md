@@ -1,5 +1,9 @@
 # Migration Plan: Semantic Kernel to Microsoft Agent Framework
 
+> **⚠️ AI-Generated Content Disclaimer**
+> 
+> This migration plan was drafted by AI (GitHub Copilot). While it is based on the latest available documentation and best practices, please verify all information, import paths, and API patterns against the official Microsoft Agent Framework documentation before implementing any changes. The AI may not have access to the most recent updates or changes to the framework.
+
 ## Overview
 
 This document outlines the migration plan for `semantic_kernel_agents.py` from the current Semantic Kernel agent implementation to the Microsoft Agent Framework. Based on the latest documentation, Microsoft Agent Framework is the unified successor to Semantic Kernel and AutoGen, combining their strengths with new capabilities.
