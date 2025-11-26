@@ -72,8 +72,8 @@ async def skAgent_response_callback(
 
 async def run_semantic_kernel_example(prompt: str) -> str:
     sequential_orchestration = SequentialOrchestration(
-        members = build_semantic_kernel_agents(),
-        agent_response_callback=sk_agent_response_callback,
+        members = buildSemantickernalAgents(),
+        agent_response_callback=skAgent_response_callback,
     )
 
     runtime = InProcessRuntime()
