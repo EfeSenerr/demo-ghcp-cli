@@ -1,0 +1,5 @@
+# Requirements for Microsoft Agent Framework demo
+# Install with: pip install -r requirements.txt
+
+agent-framework
+python-dotenv
