@@ -38,7 +38,7 @@ chat_client = OpenAIChatCompletion(
 ######################################################################
 
 
-def build_semantic_kernel_agents() -> list[Agent]:
+def buildSemantickernalAgents() -> list[Agent]:
     credential = AzureCliCredential()
 
     writer_agent = ChatCompletionAgent(
@@ -56,7 +56,7 @@ def build_semantic_kernel_agents() -> list[Agent]:
     return [writer_agent, reviewer_agent]
 
 
-async def sk_agent_response_callback(
+async def skAgent_response_callback(
     message: ChatMessageContent | Sequence[ChatMessageContent],
 ) -> None:
     if isinstance(message, ChatMessageContent):
@@ -72,15 +72,15 @@ async def sk_agent_response_callback(
 
 async def run_semantic_kernel_example(prompt: str) -> str:
     sequential_orchestration = SequentialOrchestration(
-        members=build_semantic_kernel_agents(),
-        agent_response_callback=sk_agent_response_callback,
+        members = buildSemantickernalAgents(),
+        agent_response_callback=skAgent_response_callback,
     )
 
     runtime = InProcessRuntime()
     runtime.start()
 
     try:
-        orchestration_result = await sequential_orchestration.invoke(task=prompt, runtime=runtime)
+        orchestration_result= await sequential_orchestration.invoke(task=prompt, runtime=runtime)
         final_message = await orchestration_result.get(timeout=20)
         if isinstance(final_message, ChatMessageContent):
             return final_message.content or ""
@@ -89,7 +89,7 @@ async def run_semantic_kernel_example(prompt: str) -> str:
         await runtime.stop_when_idle()
 
 async def main() -> None:
-    print("===== Semantic Kernel Sequential =====")
+    print("===== Semantic Kernel Sequential AAwnser =====")
     final_text = await run_semantic_kernel_example(PROMPT)
     print(final_text)
 
