@@ -20,7 +20,7 @@ load_dotenv()
 
 PROMPT = "Write a tagline for a budget-friendly eBike."
 
-openaiClient = AsyncOpenAI(
+openai_client = AsyncOpenAI(
     base_url = "https://models.github.ai/inference",
     api_key = os.environ["GITHUB_TOKEN"],
     default_query = {
@@ -29,7 +29,7 @@ openaiClient = AsyncOpenAI(
 )
 
 chat_client = OpenAIChatCompletion(
-        async_client=openaiClient,
+        async_client=openai_client,
         ai_model_id="openai/gpt-4.1",
     )
 
