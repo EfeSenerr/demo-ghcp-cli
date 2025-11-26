@@ -79,7 +79,7 @@ async def run_agent_framework_example(prompt: str) -> str:
     if output_event:
         # Print the conversation flow
         print("===== Conversation Flow =====")
-        messages: list[ChatMessage] | Any = output_event.data
+        messages: list[ChatMessage] = output_event.data
         for i, msg in enumerate(messages, start=1):
             name = msg.author_name or ("assistant" if msg.role == Role.ASSISTANT else "user")
             print(f"# {name}\n{msg.text}\n")
