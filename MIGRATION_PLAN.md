@@ -260,8 +260,18 @@ agent = ChatCompletionAgent(
 
 ## Resources
 
+### Microsoft Learn Documentation
+
+The official documentation for Microsoft Agent Framework and Semantic Kernel is hosted on [Microsoft Learn](https://learn.microsoft.com):
+
 - [Microsoft Agent Framework Overview](https://learn.microsoft.com/agent-framework/overview/agent-framework-overview)
-- [Agent Framework Python Repository](https://github.com/microsoft/agent-framework/tree/main/python)
-- [Agent Framework Python Samples](https://github.com/microsoft/agent-framework/tree/main/python/samples)
+- [Migration Guide from Semantic Kernel](https://learn.microsoft.com/agent-framework/migration-guide/from-semantic-kernel/)
 - [Semantic Kernel Agent Framework RC Migration Guide](https://learn.microsoft.com/en-us/semantic-kernel/support/migration/agent-framework-rc-migration-guide)
 - [Sequential Orchestration Documentation](https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/agent-orchestration/sequential)
+- [Semantic Kernel Agent Framework](https://learn.microsoft.com/en-us/semantic-kernel/frameworks/agent/)
+
+### GitHub Repositories
+
+- [Agent Framework Python Repository](https://github.com/microsoft/agent-framework/tree/main/python)
+- [Agent Framework Python Samples](https://github.com/microsoft/agent-framework/tree/main/python/samples)
+- [Semantic Kernel Python Samples](https://github.com/microsoft/semantic-kernel/tree/main/python/samples)
