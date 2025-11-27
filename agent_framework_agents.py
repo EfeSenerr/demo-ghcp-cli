@@ -37,7 +37,22 @@ def build_agent_framework_agents() -> tuple:
 
 
 async def run_agent_framework_example(prompt: str) -> str:
-    """Run the sequential workflow using Agent Framework."""
+    """
+    Run a sequential agent workflow using the Agent Framework.
+
+    This function builds a writer and reviewer agent, constructs a sequential workflow
+    (writer -> reviewer), and executes the workflow with the provided prompt.
+
+    Args:
+        prompt (str): The input prompt to be provided to the writer agent.
+
+    Returns:
+        str: The final output text produced by the reviewer agent at the end of the workflow.
+
+    Raises:
+        KeyError: If the required environment variable 'GITHUB_TOKEN' is not set.
+        Exception: If the workflow execution fails or an unexpected error occurs.
+    """
     writer_agent, reviewer_agent = build_agent_framework_agents()
 
     # Build the workflow with sequential edges: writer -> reviewer
