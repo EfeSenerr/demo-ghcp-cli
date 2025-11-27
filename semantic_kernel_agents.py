@@ -38,7 +38,7 @@ chat_client = OpenAIChatCompletion(
 ######################################################################
 
 
-def buildSemantickernalAgents() -> list[Agent]:
+def build_semantic_kernel_agents() -> list[Agent]:
     credential = AzureCliCredential()
 
     writer_agent = ChatCompletionAgent(
@@ -56,7 +56,7 @@ def buildSemantickernalAgents() -> list[Agent]:
     return [writer_agent, reviewer_agent]
 
 
-async def skAgent_response_callback(
+async def sk_agent_response_callback(
     message: ChatMessageContent | Sequence[ChatMessageContent],
 ) -> None:
     if isinstance(message, ChatMessageContent):
@@ -72,8 +72,8 @@ async def skAgent_response_callback(
 
 async def run_semantic_kernel_example(prompt: str) -> str:
     sequential_orchestration = SequentialOrchestration(
-        members = buildSemantickernalAgents(),
-        agent_response_callback=skAgent_response_callback,
+        members = build_semantic_kernel_agents(),
+        agent_response_callback=sk_agent_response_callback,
     )
 
     runtime = InProcessRuntime()
