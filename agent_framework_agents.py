@@ -63,12 +63,16 @@ async def run_agent_framework_example(prompt: str) -> str:
                 last_executor_id = executor_id
             if event.data:
                 # AgentRunUpdateEvent.data is AgentRunResponseUpdate with .text property
-                text = event.data.text if hasattr(event.data, 'text') else str(event.data)
+                text = (
+                    event.data.text if hasattr(event.data, "text") else str(event.data)
+                )
                 print(text, end="", flush=True)
         elif isinstance(event, WorkflowOutputEvent):
             # Extract text from WorkflowOutputEvent.data
             if event.data:
-                final_result = event.data.text if hasattr(event.data, 'text') else str(event.data)
+                final_result = (
+                    event.data.text if hasattr(event.data, "text") else str(event.data)
+                )
 
     print()  # Final newline
     return final_result
