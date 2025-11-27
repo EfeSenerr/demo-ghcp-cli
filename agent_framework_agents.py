@@ -15,7 +15,7 @@ load_dotenv()
 PROMPT = "Write a tagline for a budget-friendly eBike."
 
 
-def build_agent_framework_agents():
+def build_agent_framework_agents() -> tuple:
     """Build writer and reviewer agents using Agent Framework with GitHub Models endpoint."""
     chat_client = OpenAIChatClient(
         base_url="https://models.github.ai/inference",
